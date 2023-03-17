@@ -6,7 +6,10 @@ function filterCarByAvailability(cars) {
   const result = [...cars];
 
   // Tulis code-mu disini
-  const filter = result.filter((a) => a.available === true);
+  const filter = [];
+  result.map((res) => {
+    if (res.available === true) filter.push(res);
+  });
   console.log(filter);
 
   // Rubah code ini dengan array hasil filter berdasarkan availablity
